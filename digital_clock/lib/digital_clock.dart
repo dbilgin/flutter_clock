@@ -93,7 +93,7 @@ class _DigitalClockState extends State<DigitalClock> {
 
   @override
   Widget build(BuildContext context) {
-    final temp = widget.model.low.toStringAsFixed(0);
+    final temp = widget.model.temperature.toStringAsFixed(0);
     final colors = Theme.of(context).brightness == Brightness.light
         ? _lightTheme
         : _darkTheme;
@@ -109,10 +109,10 @@ class _DigitalClockState extends State<DigitalClock> {
     Color textColor = colors[_Element.text];
     Color backgroundColor = colors[_Element.background];
 
-    if (widget.model.low < 5) {
+    if (widget.model.temperature < 5) {
       textColor = Colors.lightBlue[200];
       backgroundColor = Colors.blueGrey;
-    } else if (widget.model.low > 20) {
+    } else if (widget.model.temperature > 20) {
       textColor = Colors.deepOrange;
       backgroundColor = Colors.lime;
     }
