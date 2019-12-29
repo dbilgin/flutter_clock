@@ -1,0 +1,33 @@
+name: digital_clock
+description: Digital clock.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_clock_helper:
+    path: ../flutter_clock_helper
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Fyodor-Bold
+      fonts:
+        - asset: third_party/Fyodor-Bold.ttf
+    - family: Fyodor-BoldExpanded
+      fonts:
+        - asset: third_party/Fyodor-BoldExpanded.ttf
+    - family: Fyodor-BoldCondensed
+      fonts:
+        - asset: third_party/Fyodor-BoldCondensed.ttf
+    - family:  Weather
+      fonts:
+        - asset: third_party/Weather.ttf
